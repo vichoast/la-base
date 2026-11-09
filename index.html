@@ -593,7 +593,7 @@ let ownMin=5,pendMin=5;
 let deferredInstall=null;
 const standalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
 function renderMissions(){const T=$('#tab-misiones');T.replaceChildren();
- if(!S.seen){const mc=maestroCanvas();T.append(el('div',{class:'welcome'},mc,el('div',{},el('div',{class:'h'},'LA BASE 2.0'),el('p',{},'Hola, Vicente. Ahora la base vive en tu celu, sale en pixeles y también sirve para la U, la práctica y tus pendientes. Lo de siempre sigue igual: cada misión pone una pieza y cortar a la mitad también cuenta.'),el('button',{class:'btn primary',onclick:()=>{S.seen=true;save();renderMissions();}},'Dale'))));}
+ if(!S.seen){const mc=maestroCanvas();T.append(el('div',{class:'welcome'},mc,el('div',{},el('div',{class:'h'},'LA BASE 2.0'),el('p',{},'Hola, Vicente. Ahora la base vive en tu celu y también sirve para la U, la práctica y tus pendientes. Lo de siempre sigue igual: cada misión pone una pieza y cortar a la mitad también cuenta.'),el('button',{class:'btn primary',onclick:()=>{S.seen=true;save();renderMissions();}},'Dale'))));}
  if(deferredInstall&&!standalone())T.append(el('div',{class:'install'},el('p',{},'Instálala en el celu: queda con su ícono, a pantalla completa y funciona sin internet.'),el('button',{class:'btn primary',onclick:doInstall},'Instalar')));
  T.append(el('h2',{},'¿CUÁNTA PILA TIENES?'));
  const en=el('div',{class:'energy'});
